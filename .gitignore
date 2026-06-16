@@ -1,3 +1,5 @@
 Thujmbs.db
 .Ds_Store
 *.log
+
+node_modules
