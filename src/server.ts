@@ -1,3 +1,4 @@
+/*
 import http from "node:http";
 
 const users: {
@@ -34,3 +35,35 @@ http
 		response.end("Not found!");
 	})
 	.listen(Number(process.env.PORT));
+
+*/
+
+import express from "express";
+
+const app = express();
+
+const users: {
+	name: string;
+	status: boolean;
+}[] = [
+	{
+		name: "Anderson",
+		status: true,
+	},
+	{
+		name: "Maria",
+		status: true,
+	},
+	{
+		name: "Jose",
+		status: false,
+	},
+];
+
+app.use(express.json());
+
+app.get("/users", (request, response) => {
+	response.json(users);
+});
+
+app.listen(Number(process.env.PORT));
