@@ -62,7 +62,7 @@ const users: {
 
 app.use(express.json());
 
-app.get("/users", (request, response) => {
+app.get("/users", (_request, response) => {
 	response.json(users);
 });
 
