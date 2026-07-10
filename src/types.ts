@@ -6,11 +6,11 @@ export type Customer = {
 };
 
 export type Invoice = {
-	id: Number;
-	value: String;
-	customer_id: Number;
+	id: number;
+	value: string;
+	customer_id: number;
 	status: "pending"  | "paid";
-	create_AT: String;
+	create_AT: string;
 }
 
 export type CreateInvoice = Omit<Invoice, "id" | "status">;
