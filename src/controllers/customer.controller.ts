@@ -27,7 +27,7 @@ export function createCustomer(request: Request, response: Response) {
 	response.status(201).json(customer);
 }
 
-export function updateCustomer(request: Request, _response: Response) {
+export function updateCustomer(request: Request, response: Response) {
 	const id = Number(request.params.id);
 	const { name, email, status } = request.body as {
 		name: string;
@@ -40,6 +40,8 @@ export function updateCustomer(request: Request, _response: Response) {
 		email,
 		status,
 	});
+
+	response.status(200).json(customer);
 }
 
 export function deleteCustomer(request: Request, response: Response) {
