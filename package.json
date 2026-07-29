@@ -13,6 +13,7 @@
 	"dependencies": {
 		"@biomejs/biome": "2.5.0",
 		"express": "^5.2.1",
-		"router": "^2.2.0"
+		"router": "^2.2.0",
+		"zod": "^4.4.3"
 	}
 }
