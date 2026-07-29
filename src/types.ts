@@ -16,7 +16,3 @@ export type Invoice = {
 export type CreateInvoice = Omit<Invoice, "id" | "status">;
 type InvoiceWithoutId = Omit<Invoice, "id" | "create_AT">;
 export type UpdateInvoice = Partial<InvoiceWithoutId>;
-
-export type CreateCustomer = Omit<Customer, "id" | "status">;
-type CustomerWithoutId = Omit<Customer, "id">;
-export type UpdateCustomer = Partial<CustomerWithoutId>;
